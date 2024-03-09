@@ -1,4 +1,4 @@
-Steps:
+Instructions:
 Once you are in your vps server, just copy paste this
 
 git clone https://github.com/defipirate1/q-node.git > /dev/null 2>&1  
