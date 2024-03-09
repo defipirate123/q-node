@@ -2,7 +2,7 @@
 # Run this to install q-node
 
 sudo apt -q update > /dev/null 2>&1
-sudo  apt  install  git  -y > /dev/null 2>&1
+sudo apt install git -y > /dev/null 2>&1
 
 # Download the distribution source
 wget  https://go.dev/dl/go1.20.14.linux-amd64.tar.gz > /dev/null 2>&1
@@ -11,10 +11,10 @@ wget  https://go.dev/dl/go1.20.14.linux-amd64.tar.gz > /dev/null 2>&1
 sudo tar -xvf go1.20.14.linux-amd64.tar.gz > /dev/null 2>&1
 
 # Move the GO folder to usr folder
-sudo  mv  go  /usr/local > /dev/null 2>&1
+sudo mv go /usr/local > /dev/null 2>&1
 
 # Delete (remove) the downloaded GO zipped file
-sudo  rm  go1.20.14.linux-amd64.tar.gz > /dev/null 2>&1
+sudo rm go1.20.14.linux-amd64.tar.gz > /dev/null 2>&1
 
 # Permanently set GO environment variables
 echo -e "\n# Adding Go environment variables" >> ~/.bashrc
