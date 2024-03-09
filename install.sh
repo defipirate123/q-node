@@ -47,8 +47,8 @@ cd ceremonyclient/node
 GOEXPERIMENT=arenas go run ./... > /dev/null 2>&1 &
 echo "Running q-node to create your Q Wallet and .config folder"
 
-# Adding a 60-second delay
-sleep 60
+# Adding a 1000-second delay
+sleep 1000
 
 # Kill that process
 pid=$!
