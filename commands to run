@@ -1,3 +1,7 @@
 
+# check the frame number ( have to wait some time after nodes start up )
 cd ~/ceremonyclient/node
 grpcurl -plaintext localhost:8337 quilibrium.node.node.pb.NodeService.GetNodeInfo
+
+# install glances package
+sudo apt install glances
