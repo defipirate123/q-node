@@ -79,7 +79,7 @@ sudo tee /lib/systemd/system/ceremonyclient.service > /dev/null <<EOF
 Description=Ceremony Client Go App Service
 
 [Service]
-CPUQuota=720%
+CPUQuota=600%
 Type=simple
 Restart=always
 RestartSec=5s
