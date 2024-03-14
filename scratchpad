@@ -1,1 +1,5 @@
 sudo sed -i 's/CPUQuota=720%/CPUQuota=600%/' /lib/systemd/system/ceremonyclient.service
+sudo systemctl daemon-reload
+sudo systemctl restart ceremonyclient.service
+
+sudo systemctl status ceremonyclient.service
