@@ -11,8 +11,8 @@ while IFS= read -r ip_address; do
     ssh root@$ip_address "sudo systemctl stop ceremonyclient.service"
     ssh root@$ip_address "cd ~/ceremonyclient && git fetch origin && git merge origin"
 
-    # Determine the path to the go binary dynamically
-    go_path=$(ssh root@$ip_address "which go")
+    # Use the path to the go binary 
+    go_path=/usr/local/go/bin/go
     if [[ -n "$go_path" ]]; then
         ssh root@$ip_address "cd ~/ceremonyclient/node && GOEXPERIMENT=arenas $go_path clean -v -n -a ./..."
         ssh root@$ip_address "cd ~/ceremonyclient/node && $go_path install ./..."
