@@ -1,7 +1,12 @@
-
 # check the frame number ( have to wait some time after nodes start up )
+
 cd ~/ceremonyclient/node
 grpcurl -plaintext localhost:8337 quilibrium.node.node.pb.NodeService.GetNodeInfo
 
+#check balance
+cd ~/ceremonyclient/node
+GOEXPERIMENT=arenas go run ./... -balance
+
 # install glances package
+
 sudo apt install glances
