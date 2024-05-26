@@ -1,0 +1,30 @@
+
+# Stop the q-node
+systemctl stop ceremonyclient.service
+
+# Check whether some files are updated in the ceremonyclient git repo
+cd ~/ceremonyclient
+git fetch origin
+
+# Update code
+git merge origin
+
+# Switch to the release branch:
+git switch release
+
+# Pull the latest updates:
+git pull origin release
+
+# Navigate to the node folder:
+cd ~/ceremonyclient/node
+
+# Run the release_autorun.sh script- We not doing this
+#./release_autorun.sh
+
+
+sudo sed -i 's|ExecStart=/root/go/bin/node ./...|ExecStart=/root/ceremonyclient/node/release_autorun.sh > /dev/null 2>\&1|' /lib/systemd/system/ceremonyclient.service
+sudo systemctl daemon-reload
+sudo systemctl enable ceremonyclient.service
+sudo systemctl start ceremonyclient.service
+sudo systemctl status ceremonyclient.service
+

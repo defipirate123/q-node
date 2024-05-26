@@ -43,7 +43,7 @@ git clone  https://github.com/QuilibriumNetwork/ceremonyclient.git > /dev/null 2
 echo "Cloned the Quilibrium CeremonyClient Repository"
 
 # Run " go run " once to Create your Q Wallet and .config folder
-cd ceremonyclient/node
+cd ~/ceremonyclient/node
 GOEXPERIMENT=arenas go run ./... > /dev/null 2>&1 &
 echo "Running q-node to create your Q Wallet and .config folder"
 

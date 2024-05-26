@@ -24,3 +24,6 @@ ls /root/go/bin
 # Start the q-node
 systemctl start ceremonyclient.service
 systemctl status ceremonyclient.service
+
+# disabling
+# systemctl disable ceremonyclient.service
